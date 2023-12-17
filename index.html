@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KM to Miles</title>
+    <style>
+        #km{
+            border: 2px solid pink;
+            border-radius: 5px;
+        }
+        #btn{
+            border: 2px solid red;
+            border-radius: 5px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(#1F1C18,#c99000); background-repeat: no-repeat; height: 100vh ;">
+<h1 style="text-align: center;">Kilometers to Miles Converter</h1><br><br>
+<div style="text-align: center;">
+
+        <label for="km">Enter distance in Kilometers</label>
+        <input type="number" id="km"><br><br><br>
+
+        <button id="btn" onclick="kmtom()">Convert</button><br><br>
+
+        <label for="ans1">Miles : </label>
+        <p id="ans1"></p>
+       
+    </div>
+
+    <script>
+        
+        function kmtom(){
+            var kilometers = document.getElementById("km").value;
+        
+            var factor = 0.621371
+            var miles = kilometers * factor;
+             document.getElementById("ans1").innerHTML=miles;
+        }
+    </script>
+</body>
+</html>
